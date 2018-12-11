@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 
-import { Button } from 'react-native-paper';
 import pokemon from './pokemonStore'
-
 class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Titulo da Marinho</Text>
-        <Button icon="add-a-photo" mode="contained" onPress={() => console.log('Pressed')}>
-    Press me
-  </Button>
+        <Text style={styles.title}>Pokedex!</Text>
+        
         <FlatList
-          keyExtractor={pokemon => pokemon.number}
+          keyExtractor={pokemon => pokemon.id}
           data={pokemon}
-          renderItem={({ item }) => <Text>{item.name}</Text>}
+          renderItem={({ item }) => <Text style={styles.item}>{item.name}</Text>}
         />
       </View>
     );
@@ -24,12 +20,19 @@ class App extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 50,
     padding: 50
   },
+  title: {
+    marginBottom: 16,
+    textTransform: 'uppercase'
+  },
+  item: {
+    marginBottom: 8
+  }
 });
 
 export default App;

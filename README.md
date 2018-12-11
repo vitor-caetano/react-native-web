@@ -1,10 +1,16 @@
+# React Native for Web - Sample
+This project is a demo of how React Native components can be used in a web browser to create web and mobile apps with only one codebase
+
+## Install
 ```
 cd react-native-web
-
 yarn install
+```
 
-yarn start:expo     //abrir interface do expo
-yarn start:web      //abrir app no browser
-yarn start:ios      //abrir app em um emulador ios
-yarn start:android  //abrir app em um emulador android ativo
+## Run
+```
+yarn start:expo     //Run expo console
+yarn start:web      //Run web version
+yarn start:ios      //Run IOS app (macOS only)
+yarn start:android  //Run android app on emulator or a plugged device
 ```
