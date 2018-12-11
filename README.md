@@ -27,4 +27,8 @@ docker exec -it react-native-web /bin/sh
 docker stop react-native-web
 
 docker rm -f react-native-web
+
+docker run --name react-native-web -p 3000:3000 -d docker.icasei.com.br/react-native-web
+
+docker logs react-native-web
 ```
