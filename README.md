@@ -14,3 +14,17 @@ yarn start:web      //Run web version
 yarn start:ios      //Run IOS app (macOS only)
 yarn start:android  //Run android app on emulator or a plugged device
 ```
+
+### Docker Build
+
+```
+docker build -t docker.icasei.com.br/react-native-web .
+
+docker run --name react-native-web -dit docker.icasei.com.br/react-native-web
+
+docker exec -it react-native-web /bin/sh
+
+docker stop react-native-web
+
+docker rm -f react-native-web
+```
